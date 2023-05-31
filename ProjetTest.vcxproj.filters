@@ -26,6 +26,18 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Vilain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Heros.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Personnage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VilainHeros.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="CMakeLists.txt" />
@@ -48,10 +60,10 @@
     <ClInclude Include="Personnage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Villain.h">
+    <ClInclude Include="Vilain.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="VillainHeros.h">
+    <ClInclude Include="VilainHeros.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
