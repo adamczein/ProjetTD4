@@ -170,6 +170,13 @@
     <None Include="..\doc\Classroom.md" />
     <None Include="..\doc\Vcpkg.md" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Affichable.h" />
+    <ClInclude Include="Heros.h" />
+    <ClInclude Include="Personnage.h" />
+    <ClInclude Include="Villain.h" />
+    <ClInclude Include="VillainHeros.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
