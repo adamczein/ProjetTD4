@@ -8,24 +8,22 @@
 #pragma once
 #include "VilainHeros.h"
 
-void VilainHeros::afficher(ostream& os, const Heros& heros) const
+void VilainHeros::afficher(ostream& os) const
 {
-    Personnage::afficher(os); // Appel à la méthode afficher de la classe de base Personnage pour afficher le nom et le titre du jeu
+    Personnage::afficher(os); // Call the afficher function from the Personnage base class
 
-    // Fusion du jeu du vilain avec celui du héros, séparés par un trait d'union
-    string jeuParution = getTitreJeu() + "-" + heros.getTitreJeu();
+    string jeuParution = getTitreJeu() + "-" + Heros::getTitreJeu(); // Use Heros::getTitreJeu() instead of heros.getTitreJeu()
     os << "Parution: " << jeuParution << endl;
 
-    os << "Objectif: " << getObjectif() << endl; // Affichage de l'objectif du vilain
+    os << "Objectif: " << Vilain::getObjectif() << endl; // Use Vilain::getObjectif() instead of getObjectif()
 
-    os << "Ennemi: " << getEnnemi() << endl; // Affichage de l'ennemi du héros
+    os << "Ennemi: " << Heros::getEnnemi() << endl; // Use Heros::getEnnemi() instead of getEnnemi()
 
     os << "Allies: " << endl;
-    for (auto&& allie : heros.getAllies()) // Parcours des alliés du héros
+    for (const auto& allie : Heros::getAllies()) // Use Heros::getAllies() instead of getAllies()
     {
-        os << "\t" << allie << endl; // Affichage de chaque allié avec une indentation
+        os << "\t" << allie << endl;
     }
 
-    os << "Mission spéciale: " << getObjectif() << " dans le monde de " << heros.getTitreJeu() << endl;
-    // Affichage de la mission spéciale du VilainHeros, qui est l'objectif du vilain dans le monde du héros (jeu de parution du héros)
+    os << "Mission spéciale: " << Vilain::getObjectif() << " dans le monde de " << Heros::getTitreJeu() << endl;
 }

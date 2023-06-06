@@ -15,15 +15,15 @@ class VilainHeros : public virtual Heros, public virtual Vilain
 public:
     // Constructeur prenant un objet Heros et un objet Vilain
     VilainHeros(const Heros& heros, const Vilain& vilain)
-        : Personnage(heros.getNom() + "-" + vilain.getNom(), heros.getJeu() + "-" + vilain.getJeu()),
+        : Personnage(heros.getNom() + "-" + vilain.getNom(), heros.getTitreJeu() + "-" + vilain.getTitreJeu()),
         Heros("", "", heros.getEnnemi(), heros.getAllies()),
         Vilain("", "", vilain.getObjectif())
     {
-        mission_ = vilain.getObjectif() + " dans le monde de " + heros.getJeu();
+        mission_ = vilain.getObjectif() + " dans le monde de " + heros.getTitreJeu();
     }
 
     // Méthode d'affichage pour afficher les informations du VilainHeros
-    void afficher(ostream& os, const Heros& heros) const override;
+    void afficher(ostream& os) const override; // Remove the `const Heros& heros` parameter
 
     // Méthode d'accès pour obtenir la liste des alliés du héros
     vector<string> getAllies() const { return Heros::getAllies(); }
@@ -31,7 +31,6 @@ public:
 private:
     string mission_;
 };
-
 
 
 
