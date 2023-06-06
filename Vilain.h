@@ -18,13 +18,10 @@ public:
     Vilain(const string& nom, const string& titreJeu, const string& objectif) : Personnage(nom, titreJeu), objectif_(objectif) {}
 
     // Méthode d'affichage pour afficher le nom, le titre du jeu, et l'objectif du vilain
-    void afficher(ostream& os) const {
-        Personnage::afficher(os);  // Appel à la méthode afficher de la classe de base pour afficher le nom et le titre du jeu
-        os << "Objectif: " << objectif_ << endl;  // Affichage de l'objectif du vilain
-    }
+    void afficher(ostream& os) const; 
 
     // Méthode d'accès pour obtenir l'objectif du vilain
-    string getObjectif() const { return objectif_; }
+    string getObjectif() const;
 
     // Méthode d'accès pour obtenir le titre du jeu du vilain
     string getJeu() const { return getTitreJeu(); }
