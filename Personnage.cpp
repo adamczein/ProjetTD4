@@ -9,7 +9,7 @@
 
 // Méthode d'affichage pour afficher le nom et le jeu de parution du jeu du personnage
 void Personnage::afficher(ostream& os) const {
-    os << "Nom du personnage: " << nom_ << endl << "Jeu de Parution: " << titreJeu_ << endl;
+    os << "Nom: " << nom_ << endl << "Parution: " << titreJeu_ << endl;
 }
 
 // Méthode pour changer la couleur de l'affichage (utilisant le paramètre couleur)

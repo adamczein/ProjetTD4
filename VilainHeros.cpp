@@ -13,7 +13,7 @@ void VilainHeros::afficher(ostream& os) const
     Personnage::afficher(os); // Call the afficher function from the Personnage base class
 
     string jeuParution = getTitreJeu() + "-" + Heros::getTitreJeu(); // Use Heros::getTitreJeu() instead of heros.getTitreJeu()
-    os << "Parution: " << jeuParution << endl;
+   /* os << "Parution: " << jeuParution << endl*/;
 
     os << "Objectif: " << Vilain::getObjectif() << endl; // Use Vilain::getObjectif() instead of getObjectif()
 
